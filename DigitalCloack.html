@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            clock
+        </title>
+        <script>
+            function showClock() { 
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
+                function checkTime(i) {
+                    if (i < 10) {i = "0" + i};
+                        return i;
+                }
+                setTimeout(showClock, 1000);
+            }
+        </script>
+    </head>
+    <body onload="showClock();">
+        <div id ="clock">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Employee By Id</title>
+    <script>
+        var employees = [
+                {
+                    name: 'Dany',
+                    id: '100'
+                },
+                {
+                    name: 'Jose',
+                    id: '101'
+                },
+                {
+                    name: 'Linn',
+                    id: '103'
+                },
+                {
+                    name: 'Denny',
+                    id: '104'
+                },
+                {
+                    name: 'Tim',
+                    id: '105'
+                }
+            ]
+            function getEmployeeById(Id){
+                document.getElementById('empId').value = "";
+                document.getElementById('emp-name').innerHTML = "";
+                document.getElementById('emp-id').innerHTML = "";
+                document.getElementById('test-div').style.display = 'none';
+                for (i=0; i<employees.length; i++) {
+                    if (employees[i].id == Id) {
+                        document.getElementById('emp-name').innerHTML = employees[i].name;
+                        document.getElementById('emp-id').innerHTML = employees[i].id;
+                        break;
+                    } else {
+                        document.getElementById('emp-name').innerHTML = 'Employee by the Given Id does not exists';
+                    }
+                }
+                document.getElementById('test-div').style.display = 'block';
+            }
+    </script>
+    <style>
+        #test-div {
+            width: 100%;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="empId"/>
+        <input type='button' value ='Get Employee By Id' onclick="getEmployeeById(document.getElementById('empId').value)"/>
+        <div id='test-div'>
+            <p id="emp-name"></p>
+            <p id="emp-id"></p>
+        </div>
+    </div>
+</body>
+</html>

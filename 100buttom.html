@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+                for(i=1;i<=100;i++) {
+                    var btn = document.createElement("button"); 
+                    btn.setAttribute('id',i);
+                    btn.innerHTML = i;
+                    btn.setAttribute('onClick','showAlert('+i+')');
+                    document.getElementById('div1').appendChild(btn);
+                } 
+        }, false);
+        function showAlert (i) {
+            alert(i);
+        }
+        </script>
+    </head>
+    <body id="body">
+        <div id="div1">
+
+         </div>
+    </body>
+</html>

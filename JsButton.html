@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function createButton() { 
+                var btn = document.createElement("button");
+                document.getElementById('div1').appendChild(btn);
+            }
+        </script>
+    </head>
+    <body id="body">
+        <div id="div1">
+            <button onclick="createButton()">
+                create a new button
+            </button>
+         </div>
+    </body>
+</html>

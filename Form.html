@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function isTextFieldEmpty () {
+                if(document.getElementById('text').value) {
+                    document.getElementById('submit').disabled = false;
+                    return;
+                }
+                document.getElementById('submit').disabled = true;
+            }
+            function showAlert() {
+                alert(document.getElementById('text').value);
+            }
+        </script>
+    </head>
+    <body>
+
+        <form action="" method="post">
+        <input type="text" name="name" id="text" required onkeyup="isTextFieldEmpty()">
+        <input type="submit" id ="submit" value="Submit" disabled="true" onclick="showAlert()">
+        </form>
+    </body>
+</html>

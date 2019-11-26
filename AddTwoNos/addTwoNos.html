@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Add Two Nos 
+        </title>
+        <script>
+            function addTwoNos() {
+                var val1 = document.getElementById('value1').value;
+                var val2 = document.getElementById('value2').value;
+                console.log(parseInt(val1) + parseInt(val2));
+                var val1 = document.getElementById('value1').value='';
+                var val2 = document.getElementById('value2').value='';
+            }
+        </script>
+    </head>
+    <body>
+        <input type = 'number' id='value1' placeholder="enter a number "/>
+        <input type = 'number' id='value2' placeholder="enter a number"/>
+        <input type = 'button' value = 'Add the numbers' onclick="addTwoNos()" />
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Value of div in Alert</title>
+    <script>
+        function showAlert(){
+            var value = document.getElementById('data-div').innerHTML;
+            alert(value);
+        }
+    </script>
+</head>
+<body>
+    <div id='data-div'>
+        Here are some values!
+    </div>
+    <input type='button' value ='Click Me' onclick="showAlert()"/>
+</body>
+</html>
